@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Workers' salaries</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+      var workers = [];
+
+      function addWorker() {
+          var firstName = document.getElementById('firstName').value;
+          var surname = document.getElementById('surname').value;
+          var sNumberOfWorkingYears = document.getElementById('wyears').value;
+          if(!isValid(firstName, surname, sNumberOfWorkingYears)) {
+              alert('Worker ' + firstName + ' ' + surname + ' is not added, your input is wrong!')
+              return;
+          }
+          var fullName = surname + ' ' + firstName;
+          var numberOfWorkingYears = parseInt(sNumberOfWorkingYears);
+          var education = document.getElementById('education').value;
+          var salary = countSalary(numberOfWorkingYears, education);
+          workers.push({name: fullName, numberOfWorkingYears: numberOfWorkingYears, education: education, salary: salary});
+          alert('Worker ' + firstName + ' ' + surname + ' is added!');
+      }
+
+      function countSalary(numberOfWorkingYears, education) {
+          var baseSalary = 500;
+          var raise = baseSalary * 0.1 * numberOfWorkingYears;
+          var mainSalary = baseSalary + raise;
+          var coeficient = educationCoeficient(education);
+          return mainSalary * coeficient;
+      }
+
+      function educationCoeficient(education) {
+          switch (education) {
+              case 'faculty': return 1.2;
+              case 'college': return 1.1;
+              default: return 1;
+          }
+      }
+      
+      function isValid(fName, sname, wYears) {
+          if (fName.length == 0 || sname.length == 0 || wYears.length == 0) {
+              return false;
+          }
+          var n = parseInt(wYears);
+          if (isNaN(n) || n < 0) {
+              return false;
+          }
+          return true;
+      }
+
+      function showWorkers() {
+          var tableHtml = '<table class="table table-striped"><tr><th>Name</th><th>Salary</th></tr>';
+          workers.sort(function(w1, w2) {return w2.salary - w1.salary});
+          for (var i = 0; i < workers.length; i++) {
+              tableHtml += '<tr><td>' + workers[i].name + '</td>' + '<td>' + workers[i].salary.toFixed(2) + '</td></tr>';
+          }
+          tableHtml += '</table>';
+          document.getElementById('workers').innerHTML = tableHtml;
+      }
+  </script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <fieldset class="form-group">
+                Name: <input type="text" id="firstName" class="form-control">
+            </fieldset>
+            <fieldset class="form-group">
+                Surname: <input type="text" id="surname" class="form-control">
+            </fieldset>
+            <fieldset class="form-group">
+                Working experience: <input type="text" id="wyears" class="form-control">
+            </fieldset>
+            <fieldset class="form-group">
+                Education: <select id="education" class="form-control">
+                        <option value="faculty">Faculty</option>
+                        <option value="college">College</option>
+                        <option value="school">High school</option>
+                </select>
+            </fieldset>
+            <input type="button" value="Add worker" onclick="addWorker()" class="btn btn-primary">
+            <input type="button" value="Show workers" onclick="showWorkers()" class="btn btn-success">
+        </form>
+
+        <div id="workers"></div>
+    </div>
+</body>
+
+</html>
