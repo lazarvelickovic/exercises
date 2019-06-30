@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=header, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Školski dnevnik</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="naslov">ŠKOLSKI DNEVNIK</h1>
+    </header>
+    <main>
+        <div id="buttons">
+            <button type="button" name="dnevnik" id="unos">UNOS</button>
+            <button type="button" name="dnevnik" id="prikaz">PRIKAZ</button>
+        </div>
+
+        <form id="forma" class="hidden">
+            <fieldset>
+                Ime i prezime: <br>
+                <input type="text" id="ime">
+                <br><br>
+                Matematika <br>
+                <input type="number" min="1" max="5" id="mat" length="1">
+                <br><br>
+                Srpski <br>
+                <input type="number" min="1" max="5" id="srp" length="1">
+                <br><br>
+                Računarstvo <br>
+                <input type="number" min="1" max="5" id="rac" length="1">
+                <br><br>
+                <button type="submit" id="sac">SAČUVAJ</button>
+
+            </fieldset>
+            <br><br>
+
+        </form>
+        <div>
+            <table class="hidden" id="dnevnik">
+                <thead><strong>
+
+                    <th>Ime i prezime</th>
+                    <th>Matematika</th>
+                    <th>Srpski</th>
+                    <th>Računarstvo</th>
+                    <th>Prosek</th></strong>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="custom.js"></script>
+</body>
+
+</html>

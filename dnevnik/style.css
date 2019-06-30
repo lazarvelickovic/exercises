@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.hidden{
+    display: none;
+}
+
+body{
+    background-color: rgb(179, 177, 177);
+}
+header{
+    height: 85px;
+    background-color: brown;
+    border-bottom: 1px solid #333;
+    -webkit-box-shadow: 2px 2px 4px #777;
+            box-shadow: 2px 2px 4px #777;
+}
+
+#naslov{
+    color: beige;
+    text-align: center;
+    line-height: 85px;
+}
+
+#buttons{
+    height: 160px;
+    width: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+button{
+    color: #333;
+    height: 65px;
+    width: 240px;
+    border-radius: 15px;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    -webkit-box-shadow: 2px 2px 4px #777;
+            box-shadow: 2px 2px 4px #777;
+    border:1px solid brown;
+}
+
+button:hover{
+    background-color: brown;
+    color: beige;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+form button{
+    margin: 20px;
+}
+
+#forma{
+
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #777;
+    background-color: rgb(216, 216, 216);
+    border-radius: 15px;
+    -webkit-box-shadow: 2px 2px 4px #777;
+            box-shadow: 2px 2px 4px #777;
+    border:1px solid brown;
+
+}
+
+fieldset{
+width: 100%;
+outline: none;
+border: none;
+padding-top: 30px;
+text-align: center;
+}
+
+input{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    border:1px solid brown;
+}
+
+input:not(:first-of-type){
+    width: 70px;
+}
+
+table{
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #777;
+    background-color: rgb(216, 216, 216);
+    border-radius: 15px;
+    -webkit-box-shadow: 2px 2px 4px #777;
+            box-shadow: 2px 2px 4px #777;
+    border:1px solid brown;
+}
+
+th{
+    color: brown;
+    padding: 10px;
+}
+
+th{
+padding: 5px;
+text-align: left;
+}
+
+tr{
+    border-bottom: 1px solid #555;
+    background-color: beige;
+}
+
+td{
+    padding: 5px;
+}
+td:nth-of-type(2){
+    width: 250px;
+}
+/*tr td:not(:first-of-type), tr td:not(:nth-of-type(2)){
+    width: 50px;
+}*/

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+	<style>
+		td {
+			padding: 10px;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="control">
+      <input type="radio" name="level" value="easy" id="easy" checked /> Easy
+      <input type="radio" name="level" value="medium" id="medium" /> Medium
+      <input type="radio" name="level" value="hard" id="hard" />
+      Hard<br /><br>
+      <button id="start">Start Game</button>
+    </div>
+    <div id="showHit">
+      <span id="number"></span><br><br>
+      <input type="text" id="letter" placeholder="Input Letter" />
+    </div>
+	<br>
+    <div id="alphabet">
+		<table>
+			<tr><td id="a"> A (1) </td><td id="b"> B (2) </td><td id="c"> C (3) </td><td id="d"> D (4) </td><td id="e"> E (5) </td><td id="f"> F (6) </td></tr>
+			<tr><td id="g"> G (7) </td><td id="h"> H (8) </td><td id="i"> I (9) </td><td id="j"> J (10)</td><td id="k"> K (11)</td><td id="l"> L (12)</td></tr>
+			<tr><td id="m"> M (13)</td><td id="n"> N (14)</td><td id="o"> O (15)</td><td id="p"> P (16)</td><td id="r"> R (17)</td><td id="q"> Q (18)</td></tr>
+			<tr><td id="s"> S (19)</td><td id="t"> T (20)</td><td id="u"> U (21)</td><td id="v"> V (22)</td><td id="w"> W (23)</td><td id="x"> X (24)</td></tr>
+			<tr><td id="y"> Y (25)</td><td id="z"> Z (26)</td><td></td><td></td><td></td><td></td></tr>
+		</table>
+    </div>
+	<br>
+	<div id="score">
+		SCORE<br>
+		<span id="hit" style="color: green;">Hit: 0</span><br>
+		<span id="miss" style="color: red;">Miss: 0</span><br>
+		<span id="left" style="color: blue;">Left: 0</span><br>
+  </div>
+  <script src="hitFast.js"></script>
+  </body>
+</html>

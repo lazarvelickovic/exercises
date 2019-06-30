@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 5px; 
+        }
+
+        td, span {
+            border-radius: 20%;
+            text-align: center;
+            padding: 15px 18px;
+        }
+
+        span {
+            display: inline-block;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+
+        .container1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .tr7 td {
+            border-radius: 50%;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .aqua {
+            background-color: aqua;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div>
+            <table id="numbersTable">
+                <tr>
+                    <td id="n1" class="yellow">1</td>
+                    <td id="n2" class="orange">2</td>
+                    <td id="n3" class="red">3</td>
+                    <td id="n4" class="pink">4</td>
+                    <td id="n5" class="blue">5</td>
+                    <td id="n6" class="purple">6</td>
+                    <td id="n7" class="aqua">7</td>
+                    <td id="n8" class="green">8</td>
+                </tr>
+                
+                <tr>
+                    <td id="n9" class="yellow">9</td>
+                    <td id="n10" class="orange">10</td>
+                    <td id="n11" class="red">11</td>
+                    <td id="n12" class="pink">12</td>
+                    <td id="n13" class="blue">13</td>
+                    <td id="n14" class="purple">14</td>
+                    <td id="n15" class="aqua">15</td>
+                    <td id="n16" class="green">16</td>
+                </tr>
+                
+                <tr>
+                    <td id="n17" class="yellow">17</td>
+                    <td id="n18" class="orange">18</td>
+                    <td id="n19" class="red">19</td>
+                    <td id="n20" class="pink">20</td>
+                    <td id="n21" class="blue">21</td>
+                    <td id="n22" class="purple">22</td>
+                    <td id="n23" class="aqua">23</td>
+                    <td id="n24" class="green">24</td>
+                </tr>
+                
+                <tr>
+                    <td id="n25" class="yellow">25</td>
+                    <td id="n26" class="orange">26</td>
+                    <td id="n27" class="red">27</td>
+                    <td id="n28" class="pink">28</td>
+                    <td id="n29" class="blue">29</td>
+                    <td id="n30" class="purple">30</td>
+                    <td id="n31" class="aqua">31</td>
+                    <td id="n32" class="green">32</td>
+                </tr>
+                
+                <tr>
+                    <td id="n33" class="yellow">33</td>
+                    <td id="n34" class="orange">34</td>
+                    <td id="n35" class="red">35</td>
+                    <td id="n36" class="pink">36</td>
+                    <td id="n37" class="blue">37</td>
+                    <td id="n38" class="purple">38</td>
+                    <td id="n39" class="aqua">39</td>
+                    <td id="n40" class="green">40</td>
+                </tr>
+                
+                <tr>
+                    <td id="n41" class="yellow">41</td>
+                    <td id="n42" class="orange">42</td>
+                    <td id="n43" class="red">43</td>
+                    <td id="n44" class="pink">44</td>
+                    <td id="n45" class="blue">45</td>
+                    <td id="n46" class="purple">46</td>
+                    <td id="n47" class="aqua">47</td>
+                    <td id="n48" class="green">48</td>
+                </tr>
+                
+                <tr class="tr7">
+                    <td id="n49" class="yellow"></td>
+                    <td id="n50" class="orange"></td>
+                    <td id="n51" class="red"></td>
+                    <td id="n52" class="pink"></td>
+                    <td id="n53" class="blue"></td>
+                    <td id="n54" class="purple"></td>
+                    <td id="n55" class="aqua"></td>
+                    <td id="n56" class="green"></td>
+                </tr>
+            </table>
+
+            <input id="random6" type="button" value="Random 6" class="btn btn-success">
+            <input id="reset" type="button" value="Reset" class="btn btn-danger right">
+
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script src="tombola.js"></script>
+</body>
+</html>

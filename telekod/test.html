@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+        <ul id='parentUL'>
+            <li>dad</li>
+            <li>ads</li>
+        </ul>
+
+    <script>
+        var oriVal;
+        $("#parentUL").on('dblclick', 'li', function () {
+            oriVal = $(this).text();
+            $(this).text('');
+            $("<input type='text' value="+oriVal+">").appendTo(this).focus();
+        });
+        $("#parentUL").on('focusout', 'li > input', function () {
+            var $this = $(this);
+            $this.parent().text($this.val() || oriVal);
+            $this.remove(); // Don't just hide, remove the element.
+});
+    </script>
+</body>
+</html>
